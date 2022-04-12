@@ -1,3 +1,4 @@
+
 import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
@@ -124,8 +125,19 @@ def labelled_HCS(G):
 
     labels = np.zeros(shape=(len(G)), dtype=np.uint16)
 
+    max_cluster = -1
     for _class, _cluster in enumerate(sub_graphs, 1):
         c = list(_cluster.nodes)
         labels[c] = _class
+        if(_class > max_cluster):
+            max_cluster = _class
 
-    return labels
+    iterables = [[] for _ in range(max_cluster)]
+
+    for idx, lab in enumerate(labels):
+        iterables[lab - 1].append(idx)
+
+    for idx, itr in enumerate(iterables):
+        iterables[idx] = set(itr)
+
+    return labels, iterables
