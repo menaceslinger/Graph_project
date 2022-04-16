@@ -1,5 +1,4 @@
-from asyncio.windows_events import NULL
-from copyreg import constructor
+
 import csv
 
 
@@ -14,7 +13,7 @@ class CustomCSV:
     PROPERTIES = ["Number of nodes",
                   "Number of Edges", "Average Degree", "Density"]
     PERFOMANCE_METRICS = ["Cut-Ratio",
-                          "Avg. internal density", "Coverage", "Performance"]
+                          "Avg. internal density", "Coverage", "Performance", "Execution Time"]
     ALL_HEADER = PROPERTIES + PERFOMANCE_METRICS
 
     def __init__(self, cols, dir_path="./csvs/"):
@@ -23,7 +22,7 @@ class CustomCSV:
         if(not self.dir_path.endswith("/")):
             raise NameError('Directory path must end with /')
 
-    def write_to_csv(self, data, filename="default.csv"):
+    def write_to_csv(self, data, filename="default"):
         '''
         Helper function to write data to csv and save the file
 
@@ -38,7 +37,7 @@ class CustomCSV:
                 'Size of data (columns) must be same as column names')
 
         if(data):
-            with open(self.dir_path+filename, 'w', newline='') as file:
+            with open(self.dir_path+filename+".csv", 'w', newline='') as file:
                 writer = csv.writer(file)
                 # write header
                 writer.writerow(self.cols)
