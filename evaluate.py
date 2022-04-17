@@ -2,7 +2,7 @@ import networkx as nx
 import numpy as np
 import pandas as pd
 from itertools import combinations
-
+import networkx.algorithms.community as nx_comm
 
 def avg_internal_density(graph, clustering):
     aid = []
@@ -81,3 +81,7 @@ def cov_per(G, partition):
         performance = (intra_community_edges + inter_community_non_edges) / total_pairs
 
     return coverage, performance
+
+def modularity(G,partition):
+    mod = nx_comm.modularity(G, partition)
+    return mod
