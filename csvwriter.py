@@ -13,7 +13,7 @@ class CustomCSV:
     PROPERTIES = ["Number of nodes",
                   "Number of Edges", "Average Degree", "Density"]
     PERFOMANCE_METRICS = ["Cut-Ratio",
-                          "Avg. internal density", "Coverage", "Performance", "Modularity","Execution Time"]
+                          "Avg. internal density", "Coverage", "Performance", "Modularity", "Execution Time"]
     ALL_HEADER = PROPERTIES + PERFOMANCE_METRICS
 
     def __init__(self, cols, dir_path="./csvs/"):
