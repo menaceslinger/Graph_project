@@ -1,3 +1,8 @@
+'''
+Highly Connected Subgraph (HCS) Algorithm
+This code has been inspired from the following project https://github.com/53RT/Highly-Connected-Subgraphs-Clustering-HCS by Gert 53RT.
+'''
+
 
 import networkx as nx
 import numpy as np
