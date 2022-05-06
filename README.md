@@ -20,6 +20,9 @@ To reproduce you need :
     
     
  To generate graphs, use the python notebooks in /Graph_Generation 
+ 
  The generate graphs can be found in /Clustering Analysis/sliced_data/ as pickled python lists
+ 
  Clustering analysis can be found in /Clustering Analysis/ folder
+ 
  Some figures are also in Clustering Analysis/Visualization.ipynb
