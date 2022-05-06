@@ -5,9 +5,7 @@ COMP-4060-T27-COMP-7720-T04 - Graph Algorithms Project Winter 2022
 
 To reproduce you need :
 
-    - grandalf==0.7
     - netgraph==4.2.5
-    - sage-docbuild==9.5
     - sagemath-standard==9.5
     - tqdm==4.64.0
     - python=3.10.4=h2660328_0_cpython
